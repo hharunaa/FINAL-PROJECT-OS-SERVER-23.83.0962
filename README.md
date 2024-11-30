@@ -1,4 +1,4 @@
-# FINAL-PROJECT-OS-SERVER-23.83.0962
+## FINAL-PROJECT-OS-SERVER-23.83.0962
 Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04.3 ram 8gb, prosessor 4cpu, disk 50gb
 
 ## Daftar Isi
@@ -11,28 +11,28 @@ Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04
 7. [Proxy Server (Squid)](#proxy-server-squid)
 
 
-## Squid Server
+## 1. Squid Server
 Penjelasan tentang instalasi dan konfigurasi Squid Server.
 
 
-## Nginx
+## 2. Nginx
 Penjelasan tentang instalasi dan konfigurasi Nginx.
 
 
-## Firewalls
+## 3. Firewalls
 Penjelasan tentang instalasi dan konfigurasi Firewalls.
 
 
-## CI/CD Server (Jenkins)
+## 4. CI/CD Server (Jenkins)
 Penjelasan tentang instalasi dan konfigurasi CI/CD Server menggunakan Jenkins.
 
 
-## Remote Desktop Server (XRDP)
+## 5. Remote Desktop Server (XRDP)
 Penjelasan tentang instalasi dan konfigurasi Remote Desktop Server menggunakan XRDP.
 
 
-## Streaming Media Server (Plex Media Server)
+## 6. Streaming Media Server (Plex Media Server)
 Penjelasan tentang instalasi dan konfigurasi Streaming Media Server menggunakan Plex Media Server.
 
-## Proxy Server (Squid)
+## 7. Proxy Server (Squid)
 Penjelasan tentang instalasi dan konfigurasi Proxy Server menggunakan Squid.
