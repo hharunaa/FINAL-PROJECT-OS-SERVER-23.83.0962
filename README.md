@@ -44,6 +44,14 @@ Langkah 5: Restart squid
 ```
 sudo systemctl restart squid.service
 ```
+### 1.3 Cek Squid
+Langkah 1: Menguji Squid
+```
+curl -v -x http://<hostname>:<ip>:<port> https://www.google.com/
+```
+hostname diisi dengan hostname pada visible, ip adalah ip vm, port adalah port 8888 yang sudah diisi tadi
+![Gambar](ss os server/1.png)
+
 ---
 
 ## 2. Nginx
