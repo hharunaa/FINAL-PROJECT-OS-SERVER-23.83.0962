@@ -1,7 +1,5 @@
 ## FINAL-PROJECT-OS-SERVER-23.83.0962
-
 ---
-
 Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04.3 ram 8gb, prosessor 4cpu, disk 50gb
 
 ## Daftar Isi
