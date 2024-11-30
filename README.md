@@ -1,6 +1,6 @@
 # FINAL PROJECT OS SERVER - 23.83.0962
 
-Dokumen ini berisi tutorial instalasi beberapa layanan menggunakan **Ubuntu Desktop 22.04.3** dengan spesifikasi berikut:
+Membuat Layanan Web Server di **Ubuntu Desktop 22.04.3** dengan spesifikasi berikut:
 - **RAM**: 8 GB  
 - **Processor**: 4 CPU  
 - **Disk**: 50 GB
