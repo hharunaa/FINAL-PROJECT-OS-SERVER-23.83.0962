@@ -67,7 +67,7 @@ Langkah 2: lihat list firewall
 ```
 sudo ufw app list
 ```
-![hasil](ss/9.png)
+![hasil](ss/14.png)
 
 Langkah 3: allow http nginx
 ```
@@ -77,13 +77,13 @@ Langkah 4: status nginx
 ```
 sudo ufw status
 ```
-![hasil](ss/9.png)
+![hasil](ss/15.png)
 
 Langkah 5: periksa nginx
 ```
 systemctl status nginx
 ```
-![hasil](ss/9.png)
+![hasil](ss/16.png)
 
 Langkah 6: cek ip ke browser
 ```
@@ -209,7 +209,7 @@ Langkah 7: Menghindari kemungkinan masalah memori hash bucket
 ```
 sudo nano /etc/nginx/nginx.conf
 ```
-![hasil](ss/9.png)
+![hasil](ss/17.png)
 
 Langkah 8: Uji konfigurasi
 ```
@@ -232,7 +232,7 @@ Langkah 3: cek direktori
 ```
 ls -l
 ```
-![hasil](ss/9.png)
+![hasil](ss/12.png)
 
 Langkah 4: Hapus index
 ```
@@ -254,6 +254,8 @@ Langkah 8: Jika sudah aktif silahkan masuk ke browser lalu masukan ip
 ```
 http://server_ip_kamu
 ```
+![hasil](ss/13.png)
+
 ---
 
 ## 3. Firewalls
