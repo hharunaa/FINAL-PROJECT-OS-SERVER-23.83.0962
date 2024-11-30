@@ -68,6 +68,7 @@ Langkah 2: lihat list firewall
 sudo ufw app list
 ```
 ![hasil](ss/9.png)
+
 Langkah 3: allow http nginx
 ```
 sudo ufw allow 'Nginx HTTP'
@@ -77,11 +78,13 @@ Langkah 4: status nginx
 sudo ufw status
 ```
 ![hasil](ss/9.png)
+
 Langkah 5: periksa nginx
 ```
 systemctl status nginx
 ```
 ![hasil](ss/9.png)
+
 Langkah 6: cek ip ke browser
 ```
 http://server_ip_kamu
@@ -207,6 +210,7 @@ Langkah 7: Menghindari kemungkinan masalah memori hash bucket
 sudo nano /etc/nginx/nginx.conf
 ```
 ![hasil](ss/9.png)
+
 Langkah 8: Uji konfigurasi
 ```
 sudo nginx -t
@@ -229,6 +233,7 @@ Langkah 3: cek direktori
 ls -l
 ```
 ![hasil](ss/9.png)
+
 Langkah 4: Hapus index
 ```
 rm index.nginx-debian.html
