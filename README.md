@@ -20,7 +20,7 @@ Dokumen ini berisi tutorial instalasi beberapa layanan menggunakan **Ubuntu Desk
 Penjelasan tentang instalasi dan konfigurasi Squid Server.
 ### 1.1 Install Squid Server
 Langkah 1: Install Squid Server
-```bash
+```
 sudo apt install squid
 ```
 ### 1.2 Configurasi Squid Server
