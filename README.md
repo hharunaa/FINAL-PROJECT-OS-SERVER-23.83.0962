@@ -13,4 +13,6 @@ Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04
 # 1. Squid server
 # 1.1 Install Squid server
 Langkah 1: Lakukan instalasi paket Squid server
+
+```bash
 sudo apt install squid
