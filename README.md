@@ -1,5 +1,9 @@
-## FINAL-PROJECT-OS-SERVER-23.83.0962
-Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04.3 ram 8gb, prosessor 4cpu, disk 50gb
+# FINAL PROJECT OS SERVER - 23.83.0962
+
+Dokumen ini berisi tutorial instalasi beberapa layanan menggunakan **Ubuntu Desktop 22.04.3** dengan spesifikasi berikut:
+- **RAM**: 8 GB  
+- **Processor**: 4 CPU  
+- **Disk**: 50 GB
 
 ## Daftar Isi
 1. [1. Squid Server](#1-squid-server)
