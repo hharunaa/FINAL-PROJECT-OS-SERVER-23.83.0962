@@ -1,18 +1,46 @@
 # FINAL-PROJECT-OS-SERVER-23.83.0962
 Berisikan tutorial menginstall beberapa layanan menggunakan ubuntu dekstop 22.04.3 ram 8gb, prosessor 4cpu, disk 50gb
 
-# DAFTAR ISI
-# 1.  Squid server
-# 2.  Nginx
-# 3.  Firewalls
-# 4.   CI/CD Server (Jenkins)
-# 5.   Remote Desktop Server (XRDP)
-# 6.   Streaming Media Server (Plex Media Server)
-# 7.   Proxy Server (Squid)
+## Daftar Isi
+1. [Squid Server](#squid-server)
+2. [Nginx](#nginx)
+3. [Firewalls](#firewalls)
+4. [CI/CD Server (Jenkins)](#cicd-server-jenkins)
+5. [Remote Desktop Server (XRDP)](#remote-desktop-server-xrdp)
+6. [Streaming Media Server (Plex Media Server)](#streaming-media-server-plex-media-server)
+7. [Proxy Server (Squid)](#proxy-server-squid)
 
-# 1. Squid server
-# 1.1 Install Squid server
-Langkah 1: Lakukan instalasi paket Squid server
+---
 
-```bash
-sudo apt install squid
+## Squid Server
+Penjelasan tentang instalasi dan konfigurasi Squid Server.
+
+---
+
+## Nginx
+Penjelasan tentang instalasi dan konfigurasi Nginx.
+
+---
+
+## Firewalls
+Penjelasan tentang instalasi dan konfigurasi Firewalls.
+
+---
+
+## CI/CD Server (Jenkins)
+Penjelasan tentang instalasi dan konfigurasi CI/CD Server menggunakan Jenkins.
+
+---
+
+## Remote Desktop Server (XRDP)
+Penjelasan tentang instalasi dan konfigurasi Remote Desktop Server menggunakan XRDP.
+
+---
+
+## Streaming Media Server (Plex Media Server)
+Penjelasan tentang instalasi dan konfigurasi Streaming Media Server menggunakan Plex Media Server.
+
+---
+
+## Proxy Server (Squid)
+Penjelasan tentang instalasi dan konfigurasi Proxy Server menggunakan Squid.
