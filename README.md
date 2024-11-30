@@ -23,7 +23,27 @@ Langkah 1: Install Squid Server
 ```bash
 sudo apt install squid
 ```
-
+### 1.2 Configurasi Squid Server
+Langkah 1: Buka repo Squid dengan teks editor (saya menggunakan nano)
+```bash
+sudo nano /etc/squid/squid.conf
+```
+Langkah 2: Allow http port (scroll kebawah sampai menemukan http_port, lalu ganti dengan 8888
+```bash
+http_port 8888
+```
+Langkah 3: buat hostname agar terlihat (scroll kebawah sampai menemukan visible_hostname saya menggunakan hostname haruna)
+```bash
+visible_hostname haruna
+```
+Langkah 4: Masukan ip ubuntu di adapt to list your (ip kamu) IP network from where browsing
+```bash
+Masukan ip ubuntu di adapt to list your (192.168.0.101) IP network from where browsing
+```
+Langkah 5: Restart squid
+```bash
+sudo systemctl restart squid.service
+```
 ---
 
 ## 2. Nginx
