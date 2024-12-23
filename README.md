@@ -1,81 +1,141 @@
 # FINAL PROJECT OS SERVER - 23.83.0962
 
-# Webserver Project
+# Proyek Webserver
 
-This project is a webserver setup using Ubuntu Server, configured with the following specifications and installed services:
+Proyek ini adalah pengaturan webserver menggunakan Ubuntu Server, dikonfigurasi dengan spesifikasi berikut dan layanan yang diinstal:
 
-## Server Specifications
-- **Operating System:** Ubuntu Server
+## Spesifikasi Server
+- **Sistem Operasi:** Ubuntu Server
 - **RAM:** 12 GB
-- **Processor:** 8 Cores
-- **Storage:** 50 GB
+- **Prosesor:** 8 Core
+- **Penyimpanan:** 50 GB
 
-## Installed Services
-1. **Apache2:** Used as a reverse proxy server.
-2. **Flask:** Python-based web framework for application development.
-3. **Gunicorn:** WSGI server to serve the Flask application.
-4. **SSH:** Secure Shell for remote server access.
-
-## Hosting
-The webserver is hosted using **Cloudflare Tunnel** for secure and reliable access.
+## Layanan yang Diinstal
+1. **Apache2:** Digunakan sebagai reverse proxy server.
+2. **Flask:** Framework web berbasis Python untuk pengembangan aplikasi.
+3. **Gunicorn:** Server WSGI untuk melayani aplikasi Flask.
+4. **SSH:** Secure Shell untuk akses server jarak jauh.
+5. **Cloudflare Tunnel:** Untuk hosting yang aman dan andal.
 
 ---
 
-## Setup Guide
+## Panduan Pengaturan
 
-### 1. Update and Upgrade the System
+### 1. Perbarui dan Tingkatkan Sistem
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 2. Install Apache2
+### 2. Instal Apache2
 ```bash
 sudo apt install apache2 -y
 ```
-Enable and start the Apache2 service:
+Aktifkan dan mulai layanan Apache2:
 ```bash
 sudo systemctl enable apache2
 sudo systemctl start apache2
 ```
 
-### 3. Install Python and Required Modules
+### 3. Instal Python dan Modul yang Diperlukan
 ```bash
 sudo apt install python3 python3-pip -y
 ```
-Install Flask and Gunicorn:
+Instal Flask dan Gunicorn:
 ```bash
 pip3 install flask gunicorn
 ```
 
-### 4. Configure Flask Application
-Create your Flask application, e.g., `app.py`:
+### 4. Konfigurasi Aplikasi Flask
+Buat aplikasi Flask Anda, misalnya `app.py`:
 ```python
-from flask import Flask
+from flask import Flask, render_template, url_for
+import os
+
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return "Hello, World!"
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-if __name__ == "__main__":
-    app.run()
+@app.route('/Harga')
+@app.route('/Harga.html')
+def harga():
+    return render_template('Harga.html')
+
+@app.route('/Internet-Rumah')  # Ubah spasi menjadi strip
+@app.route('/Internet-Rumah.html')
+def internet_rumah():
+    return render_template('Internet-Rumah.html')
+
+@app.route('/Kebijakan-Privasi')  # Ubah spasi menjadi strip
+@app.route('/Kebijakan-Privasi.html')
+def kebijakan_privasi():
+    return render_template('Kebijakan-Privasi.html')
+
+@app.route('/Layanan')
+@app.route('/Layanan.html')
+def layanan():
+    return render_template('Layanan.html')
+
+@app.route('/Lebih-Lanjut')  # Ubah spasi menjadi strip
+@app.route('/Lebih-Lanjut.html')
+def lebih_lanjut():
+    return render_template('Lebih-Lanjut.html')
+
+@app.route('/Paket-Dasar')  # Ubah spasi menjadi strip
+@app.route('/Paket-Dasar.html')
+def paket_dasar():
+    return render_template('Paket-Dasar.html')
+
+@app.route('/Paket-Premium')  # Ubah spasi menjadi strip
+@app.route('/Paket-Premium.html') 
+def paket_premium():
+    return render_template('Paket-Premium.html')
+
+@app.route('/Paket-Pro')  # Ubah spasi menjadi strip
+@app.route('/Paket-Pro.html')
+def paket_pro():
+    return render_template('Paket-Pro.html')
+
+@app.route('/Paket-Streaming')  # Ubah spasi menjadi strip
+@app.route('/Paket-Streaming.html') 
+def paket_streaming():
+    return render_template('Paket-Streaming.html')
+
+@app.route('/Solusi-Bisnis')  # Ubah spasi menjadi strip
+@app.route('/Solusi-Bisnis.html')
+def solusi_bisnis():
+    return render_template('Solusi-Bisnis.html')
+
+@app.route('/testimoni')
+@app.route('/Testimoni.html')
+def testimoni():
+    return render_template('Testimoni.html')
+
+# Tambahkan error handler
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
 ```
 
-### 5. Run the Flask Application with Gunicorn
-Start the Gunicorn server:
+### 5. Jalankan Aplikasi Flask dengan Gunicorn
+Mulai server Gunicorn:
 ```bash
-gunicorn --bind 0.0.0.0:8000 app:app
+gunicorn --bind 127.0.0.1:8000 app:app
 ```
 
-### 6. Configure Apache2 as a Reverse Proxy
-Enable required Apache modules:
+### 6. Konfigurasi Apache2 sebagai Reverse Proxy
+Aktifkan modul Apache yang diperlukan:
 ```bash
 sudo a2enmod proxy proxy_http
 ```
-Edit the Apache configuration file (e.g., `/etc/apache2/sites-available/000-default.conf`):
+Edit file konfigurasi Apache (misalnya, `/etc/apache2/sites-available/000-default.conf`):
 ```apache
 <VirtualHost *:80>
-    ServerName yourdomain.com
+    ServerName rusdi.ambasigma.my.id
 
     ProxyPass / http://127.0.0.1:8000/
     ProxyPassReverse / http://127.0.0.1:8000/
@@ -86,24 +146,20 @@ Restart Apache2:
 sudo systemctl restart apache2
 ```
 
-### 7. Install and Configure Cloudflare Tunnel
-Follow the official Cloudflare Tunnel setup guide:
-- Install Cloudflare Tunnel binary (`cloudflared`).
-- Authenticate and configure your tunnel.
-- Ensure your domain points to the tunnel.
+### 7. Instal dan Konfigurasi Cloudflare Tunnel
+Ikuti panduan resmi untuk pengaturan Cloudflare Tunnel:
+- Instal binary Cloudflare Tunnel (`cloudflared`).
+- Autentikasi dan konfigurasi tunnel Anda.
+- Pastikan domain Anda mengarah ke tunnel.
 
 ---
 
-## Usage
-- Access the webserver via the configured Cloudflare Tunnel URL.
-- Manage and modify the Flask application as needed in the `app.py` file.
+## Penggunaan
+- Akses webserver melalui URL Tunnel Cloudflare yang telah dikonfigurasi.
+- Kelola dan modifikasi aplikasi Flask sesuai kebutuhan di file `app.py`.
 
 ---
 
-## Notes
-- Ensure proper security configurations for production environments.
-- Regularly update your server and services to maintain security and stability.
-
-## License
-This project is open-source and available under the MIT License.
-
+## Catatan
+- Pastikan konfigurasi keamanan yang sesuai untuk lingkungan produksi.
+- Perbarui server dan layanan Anda secara berkala untuk menjaga keamanan dan stabilitas.
